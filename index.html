@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Important Question</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="mail-heart.png" type="image/x-icon" />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const yesButton = document.getElementById("yesButton");
+  const noButton = document.getElementById("noButton");
+  const responseMessage = document.getElementById("responseMessage");
+
+  const questions = [
+    "Are you sure?",
+    "Are you really sure??",
+    "Are you really really sure???",
+    "Think again?",
+    "Don't believe in second chances?",
+    "Why are you being so cold? 😢",
+    "Maybe we can talk about it?",
+    "I am not going to ask again! 😡",
+    "Ok now this is hurting my feelings! 😭",
+    "You are now just being mean! 😭",
+    "Why are you doing this to me? 😭",
+    "Please give me a chance! 🙏",
+    "I am begging you to stop! 🙏",
+  ];
+
+  let questionIndex = 0;
+
+  yesButton.addEventListener("click", function () {
+    responseMessage.innerText = "Yepppie, see you sooonnn ❤️";
+    noButton.style.display = "none";
+  });
+
+  noButton.addEventListener("click", function () {
+    noButton.innerText = questions[questionIndex];
+    questionIndex = (questionIndex + 1) % questions.length;
+  });
+});
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600&display=swap");
+
+body {
+  font-family: "Mali", sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.valentine-image {
+  width: 300px; /* Adjust the width as needed */
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#yesButton {
+  background-color: #3cb371;
+}
+
+#noButton {
+  background-color: #c2185b;
+}
+
+#yesButton:hover {
+  background-color: #32925d;
+}
+
+#noButton:hover {
+  background-color: #9b144a;
+}
+
+#responseMessage {
+  margin-top: 20px;
+}
+  </style>
+  <body>
+    <div class="container">
+      <h1>Will you be my valentine?</h1>
+      <button id="yesButton">Okayyy</button>
+      <button id="noButton">No</button>
+      <h2 id="responseMessage"></h2>
+      <br />
+      <h6>Created by Hutotpn</h6>
+    </div>
+    <script src="./js/en.js"></script>
+  </body>
+</html>
